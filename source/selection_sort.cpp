@@ -10,9 +10,18 @@
 #include <iostream>
 #include <string>
 #include <vector>
-using namespace std;
 
-// Function prototypes
+//------------------------------------------------------------------------------
+// using symbols
+//------------------------------------------------------------------------------
+using std::cin;
+using std::cout;
+using std::string;
+using std::vector;
+
+//------------------------------------------------------------------------------
+// local function prototypes
+//------------------------------------------------------------------------------
 void selectionSort(vector<string>&);
 void swap(string&, string&);
 int binarySearch(const vector<string>&, string);
@@ -55,9 +64,9 @@ int main() {
     return 0;
 }
 
-//***********************************************************************
-// The selectionSort function sorts a string vector in ascending order. *
-//***********************************************************************
+//------------------------------------------------------------------------------
+// The selectionSort function sorts a string vector in ascending order.
+//------------------------------------------------------------------------------
 void selectionSort(vector<string>& v) {
     int minIndex;
     string minValue;
@@ -79,22 +88,22 @@ void selectionSort(vector<string>& v) {
     }
 }
 
-//***************************************************
-// The swap function swaps a and b in memory.       *
-//***************************************************
+//------------------------------------------------------------------------------
+// The swap function swaps a and b in memory.
+//------------------------------------------------------------------------------
 void swap(string& a, string& b) {
     string temp = a;
     a = b;
     b = temp;
 }
 
-//***************************************************************
-// The binarySearch function performs a binary search on a      *
-// string vector. array, which has a maximum of size elements,  *
-// is searched for the number stored in value. If the number is *
-// found, its vector subscript is returned. Otherwise, -1 is    *
-// returned indicating the value was not in the vector.         *
-//***************************************************************
+//------------------------------------------------------------------------------
+// The binarySearch function performs a binary search on a     
+// string vector. array, which has a maximum of size elements, 
+// is searched for the number stored in value. If the number is
+// found, its vector subscript is returned. Otherwise, -1 is   
+// returned indicating the value was not in the vector.        
+//------------------------------------------------------------------------------
 
 int binarySearch(const vector<string>& v, string str) {
     int first = 0,             // First vector element
