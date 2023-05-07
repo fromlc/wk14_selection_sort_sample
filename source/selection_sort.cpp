@@ -38,8 +38,8 @@ int main() {
     // Display the vector's elements.
     cout << "Here are the sorted names:\n";
     for (string element : names)
-        cout << element << endl;
-    cout << endl;
+        cout << element << '\n';
+    cout << '\n';
 
     // Search for a name.
     cout << "Enter a name to search for: ";
@@ -48,7 +48,7 @@ int main() {
 
     // Display the results.
     if (position != -1)
-        cout << "That name is found at position " << position << endl;
+        cout << "That name is found at position " << position << '\n';
     else
         cout << "That name is not found.\n";
 
@@ -66,6 +66,7 @@ void selectionSort(vector<string>& v) {
 
         minIndex = start;
         minValue = v[start];
+
         for (int index = start + 1; index < v.size(); index++) {
 
             if (v[index] < minValue) {
@@ -103,6 +104,7 @@ int binarySearch(const vector<string>& v, string str) {
     bool found = false;        // Flag
 
     while (!found && first <= last) {
+
         middle = (first + last) / 2;  // Calculate mid point
         if (v[middle] == str) {       // If value is found at mid
 
