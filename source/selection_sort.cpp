@@ -1,11 +1,12 @@
 //------------------------------------------------------------------------------
 // Pr8-7_selection_sort.cpp
 // 
+// This program demonstrates how to sort and search a
+// string vector using selection sort and binary search.
+// 
 // Author: Tony Gaddis, in Gaddis 9e at pp. 495-497
 // Modified by: Prof. Linda C
 //------------------------------------------------------------------------------
-// This program demonstrates how to sort and search a
-// string vector using selection sort and binary search.
 #include <iostream>
 #include <string>
 #include <vector>
@@ -16,6 +17,9 @@ void selectionSort(vector<string>&);
 void swap(string&, string&);
 int binarySearch(const vector<string>&, string);
 
+//------------------------------------------------------------------------------
+// entry point
+//------------------------------------------------------------------------------
 int main() {
     string searchValue;  // Value to search for
     int position;        // Position of found value
@@ -30,7 +34,7 @@ int main() {
 
     // Display the vector's elements.
     cout << "Here are the sorted names:\n";
-    for (auto element : names)
+    for (string element : names)
         cout << element << endl;
     cout << endl;
 
@@ -55,14 +59,14 @@ void selectionSort(vector<string>& v) {
     int minIndex;
     string minValue;
 
-    for (int start = 0; start < (v.size() - 1); start++)
-    {
+    for (int start = 0; start < (v.size() - 1); start++) {
+
         minIndex = start;
         minValue = v[start];
-        for (int index = start + 1; index < v.size(); index++)
-        {
-            if (v[index] < minValue)
-            {
+        for (int index = start + 1; index < v.size(); index++) {
+
+            if (v[index] < minValue) {
+
                 minValue = v[index];
                 minIndex = index;
             }
@@ -95,11 +99,10 @@ int binarySearch(const vector<string>& v, string str) {
         position = -1;         // Position of search value
     bool found = false;        // Flag
 
-    while (!found && first <= last)
-    {
-        middle = (first + last) / 2; // Calculate mid point
-        if (v[middle] == str)        // If value is found at mid
-        {
+    while (!found && first <= last) {
+        middle = (first + last) / 2;  // Calculate mid point
+        if (v[middle] == str) {       // If value is found at mid
+
             found = true;
             position = middle;
         }
