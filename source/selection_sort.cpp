@@ -21,13 +21,16 @@ int binarySearch(const vector<string>&, string);
 // entry point
 //------------------------------------------------------------------------------
 int main() {
+
     string searchValue;  // Value to search for
     int position;        // Position of found value
 
     // Define a vector of strings.
-    vector<string> names { "Lopez", "Smith", "Pike", "Jones",
+    vector<string> names { 
+        "Lopez", "Smith", "Pike", "Jones",
         "Abernathy", "Hall", "Wilson", "Kimura",
-        "Alvarado", "Harrison", "Geddes", "Irvine" };
+        "Alvarado", "Harrison", "Geddes", "Irvine",
+    };
 
     // Sort the vector.
     selectionSort(names);
