@@ -104,7 +104,6 @@ void swap(string& a, string& b) {
 // found, its vector subscript is returned. Otherwise, -1 is   
 // returned indicating the value was not in the vector.        
 //------------------------------------------------------------------------------
-
 int binarySearch(const vector<string>& v, string str) {
     int first = 0,             // First vector element
         last = v.size() - 1,   // Last vector element
