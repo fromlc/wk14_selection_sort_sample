@@ -1,3 +1,9 @@
+//------------------------------------------------------------------------------
+// Pr8-7_selection_sort.cpp
+// 
+// Author: Tony Gaddis, in Gaddis 9e at pp. 495-497
+// Modified by: Prof. Linda C
+//------------------------------------------------------------------------------
 // This program demonstrates how to sort and search a
 // string vector using selection sort and binary search.
 #include <iostream>
